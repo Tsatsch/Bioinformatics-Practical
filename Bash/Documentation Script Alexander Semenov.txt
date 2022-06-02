@@ -1,0 +1,21 @@
+1)
+cd tutorium/material
+awk -F ',' '{print $1}' yeastract.csv (take the first column, divided by ',')
+awk -F ',' '{print $1}' yeastract.csv | sort | uniq -c
+mann kann zusätzlich mit sort -r sortieren
+
+2)
+#!/bin/bash
+while read line
+do echo $line
+done < $1 | cut -d "," -f 1 | sort |uniq -c>&1
+
+
+or
+
+#!/bin/bash
+filename=$1
+awk -F ',' '{print $1}' $filename | sort | uniq -c>&1
+
+execute: bash Semenov_countTargets.sh ~/tutorium/material/yeastract.csv
+don't forget to chmod +x Semenov_countTargets.sh!

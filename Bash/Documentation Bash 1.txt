@@ -1,0 +1,30 @@
+P:
+2) ssh semenov@remote.cip.ifi.lmu.de
+3)mkdir tutorium
+4)mkdir eins, mkdir zwei
+cd eins, touch foo, bar, qux
+5)cp foo /zwei, ls
+6)ls, rm foo bar qux, rm -r eins
+7)ln -s material /home/proj/tutorium_bioinformatik/ 
+8)cd material/intro, ls -1 | wc -l
+9)wget  http://files.fosswire.com/2007/08/fwunixref.pdf
+10)ssh semenov@smaragd, exit
+11)scp semenov@smaragd:/tmp/test semenov@remote.cip.ifi.lmu.de:/tmp
+
+H:
+1)cd tutorium/zwei, ls -la, (bar = 744, foo = 744)
+2)chmod u=w,g=rx,o=rw foo
+3)chmod 163 bar
+4)echo Hello >helloFile, echo Tutorium >> helloFile
+5)cat C_elegans.pep.all.fasta, less C_elegans.pep.all.fasta (beide sind nicht gut, aber less gibt es teilweise aus, sodass es lesbar ist und nicht wie cat reihe für Reihe mit einer hohen Geschwindigkeit)
+6)wc -l C_elegans.pep.all.fasta (284348)
+7)head -5 C_elegans.pep.all.fasta, tail -5 C_elegans.pep.all.fasta
+8)sort studenten.txt, sort -r studenten.txt
+9)less studenten.txt | cut -f2
+
+
+
+
+
+
+

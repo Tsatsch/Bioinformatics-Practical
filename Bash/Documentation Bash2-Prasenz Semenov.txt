@@ -1,0 +1,30 @@
+Alexander Semenov
+
+less /home/proj/tutorium_bioinformatik/Homo_sapiens.GRCh37.75.gtf 
+
+1)h
+2)-N
+3)^f, ^b oder g und G
+4)555g
+5)/rRNA
+N-previous n-next
+6)-x10
+7)cat -vet /home/proj/tutorium_bioinformatik/specialCharacters.txt
+got this output: 
+
+this is^Ia file that ^Icontain many special characters such as tabs^Ior different types of newlines^M$
+$
+^M$
+how can you show them? Which symbols stand for which special character?$
+^M$
+testing$
+^I^Itesting^L^H$
+more testing$
+^I^@^K^@even more testing$
+^I^I^I$
+
+
+^M$ - line that contains only the one word M
+$ - position at the end of the line
+testing$ - last word of the line is testing
+^I - tab

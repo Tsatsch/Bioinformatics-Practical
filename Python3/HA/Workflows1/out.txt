@@ -1,0 +1,11 @@
+Chromosome dna:chromosome chromosome:ASM904v1:Chromosome:1:4215606:1 REF 	1188073	919284	915112	1193137
+Chromosome dna:chromosome chromosome:ASM584v2:Chromosome:1:4641652:1 REF 	1142742	1180091	1177437	1141382
+Haemophilus influenzae 86-028NP 	591464	365091	365415	592520
+Helicobacter pylori 26695 	505397	327080	321273	514075
+Chromosome dna:chromosome chromosome:ASM1514v1:Chromosome:1:1667163:1 REF 	387694	447488	448391	383590
+Mycobacterium tuberculosis CDC1551 	757091	1447868	1441348	757355
+Chromosome dna:chromosome chromosome:ASM19595v2:Chromosome:1:4411532:1 REF 	758552	1449998	1444614	758368
+Salmonella enterica subsp. enterica serovar Typhimurium str. LT2 	1160904	1268422	1268221	1159903
+Thermotoga petrophila 	491488	427419	413241	491363
+Vibrio cholerae O1 biovar El Tor str. N16961 chromosome I 	769234	703384	708931	779567
+Vibrio cholerae O1 biovar El Tor str. N16961 chromosome II 	284004	249478	253583	285246

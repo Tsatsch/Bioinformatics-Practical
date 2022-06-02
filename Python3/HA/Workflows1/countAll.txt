@@ -1,0 +1,14 @@
+dir=$1
+out=$2
+fastas=$dir/*.fasta
+
+##command to clear the output file
+a=''
+${a} > $out
+
+for filename in $fastas
+do
+(python3 semenov_countNt $filename ACGT >> $out)
+done
+
+python3 semenov_plot.py $out

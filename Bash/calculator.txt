@@ -1,0 +1,7 @@
+a=$1
+op=$2
+b=$3
+
+sum=`expr $a "$op" $b`
+echo  $sum
+

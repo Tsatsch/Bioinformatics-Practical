@@ -1,0 +1,70 @@
+Alexander Semenov
+working with git:
+
+neues Projekt Bash2 Semenov auf GitLab erstellt. Habe es nicht mergeDemo, sondern bash2-semenov benannt (ACHTEN)
+
+1) Neues Repository bash2-semenov anlegen:
+git clone https://gitlab2.cip.ifi.lmu.de/semenov/bash2-semenov.git
+(wenn ich clone with SSH mache, akzeptier er mein GitLab Passwort nicht)
+
+2) Neue Verzeichnisse git1 und git2 erstellen:
+cd tutorium
+mkdir git1 git2
+
+3) Repository in die Verzeichnisse klonen:
+cd git1
+git clone https://gitlab2.cip.ifi.lmu.de/semenov/bash2-semenov.git
+cd git2
+git clone https://gitlab2.cip.ifi.lmu.de/semenov/bash2-semenov.git
+
+4) test Datei erstellen und auf gitlab pushen:
+cd git1/bash2-semenov
+touch test
+git add test
+git commit -m 'test file commit'
+git push -u origin master
+
+5) im git2 Verzeichnis die test Datei pullen, editieren und pushen:
+cd 
+cd tutorium/git2/bash2-semenov
+git pull
+nano test (wrote some text into the test file)
+git add test
+git commit -m 'new testfile'
+
+6) die test Datei im git 1 editieren und pushen:
+cd
+cd tutorium/git1/bash2-semenov
+nano test (wrote some other text into the test file)
+git add test
+git commit -m 'testfile git1'
+git push -u origin master
+
+7) nach den Veraenderungen in beiden git Verzeichnissen, mache ich einen pull im git2 -> merge conflict:
+cd 
+cd tutorium/git2/bash2-semenov
+git pull
+(Auto-merging test
+CONFLICT (content): Merge conflict in test
+Automatic merge failed; fix conflicts and then commit the result.)
+
+8) merge conflict fixen:
+vim test (edit the file and :wc saved quit)
+git add test
+git commit -m 'solved'
+git push -u origin master
+
+9)Test, ob der merge conflict geloest wurde:
+cd tutorium/git1/bash2-semenov
+git pull (no errors :D)
+
+working with big data
+
+cd tutorium/material
+
+1) grep processed_transcript Homo_sapiens.GRCh37.75.gtf
+2) grep processed_transcript Homo_sapiens.GRCh37.75.gtf | awk '$3 == "exon"'
+3) grep processed_transcript Homo_sapiens.GRCh37.75.gtf | awk '$3 == "exon"'|  cut -f9 | cut -f1 -d';'
+4)grep processed_transcript Homo_sapiens.GRCh37.75.gtf | awk '$3 == "exon"'|  cut -f9 | cut -f1 -d';' |sort | uniq |wc -l 
+-> 12847 (sort war nicht noetig)
+Diese Zahl besagt, wie viele wir einzigartige Genlokuse haben
